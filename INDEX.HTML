@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate Day | For My Sweet Simran 🍫❤️</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --chocolate-dark: #4A2C2A;
+            --chocolate-medium: #8B4513;
+            --chocolate-light: #D2691E;
+            --chocolate-gold: #FFD700;
+            --chocolate-pink: #FF6B9D;
+            --chocolate-cream: #FFF5E1;
+            --chocolate-milk: #F5DEB3;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #2c1810 0%, #4A2C2A 50%, #8B4513 100%);
+            color: var(--chocolate-cream);
+            min-height: 100vh;
+            overflow-x: hidden;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        /* Floating Chocolate Hearts */
+        .floating-chocolate {
+            position: absolute;
+            font-size: 24px;
+            animation: floatChocolate 20s infinite linear;
+            opacity: 0.7;
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        @keyframes floatChocolate {
+            0% {
+                transform: translateY(100vh) rotate(0deg) scale(0.5);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            90% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg) scale(1);
+                opacity: 0;
+            }
+        }
+        
+        /* Chocolate Drizzle Animation */
+        .chocolate-drizzle {
+            position: absolute;
+            width: 4px;
+            height: 100px;
+            background: linear-gradient(to bottom, transparent, var(--chocolate-medium), transparent);
+            animation: drizzle 3s infinite linear;
+            border-radius: 2px;
+        }
+        
+        @keyframes drizzle {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        /* Header */
+        header {
+            text-align: center;
+            padding: 60px 0 40px;
+            position: relative;
+        }
+        
+        .main-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 5rem;
+            background: linear-gradient(45deg, var(--chocolate-gold), var(--chocolate-pink), var(--chocolate-gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+            animation: titleGlow 3s infinite alternate;
+        }
+        
+        @keyframes titleGlow {
+            0% {
+                text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+            }
+            100% {
+                text-shadow: 0 0 40px rgba(255, 107, 157, 0.4);
+            }
+        }
+        
+        .couple-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .name-card {
+            padding: 25px 50px;
+            border-radius: 20px;
+            font-size: 2.2rem;
+            font-weight: 700;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        
+        .name-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .himanshu-card {
+            background: linear-gradient(135deg, var(--chocolate-medium), var(--chocolate-dark));
+            box-shadow: 0 15px 40px rgba(139, 69, 19, 0.4);
+            border: 2px solid var(--chocolate-gold);
+        }
+        
+        .simran-card {
+            background: linear-gradient(135deg, var(--chocolate-pink), #ff4081);
+            box-shadow: 0 15px 40px rgba(255, 107, 157, 0.4);
+            border: 2px solid var(--chocolate-gold);
+        }
+        
+        .heart-emoji {
+            font-size: 3rem;
+            color: var(--chocolate-pink);
+            animation: heartbeat 1.2s infinite;
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+        
+        .tagline {
+            font-size: 1.8rem;
+            color: var(--chocolate-gold);
+            margin: 30px auto;
+            max-width: 800px;
+            line-height: 1.6;
+            text-align: center;
+        }
+        
+        /* Animated Chocolate Box */
+        .chocolate-box-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin: 40px auto;
+            perspective: 1000px;
+        }
+        
+        .chocolate-box {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            animation: boxFloat 6s infinite ease-in-out;
+        }
+        
+        @keyframes boxFloat {
+            0%, 100% { transform: rotateX(-10deg) rotateY(-15deg) translateY(0); }
+            50% { transform: rotateX(-10deg) rotateY(-15deg) translateY(-20px); }
+        }
+        
+        .box-lid {
+            position: absolute;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(45deg, var(--chocolate-dark), var(--chocolate-medium));
+            top: 0;
+            border-radius: 20px 20px 0 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            transform-origin: bottom;
+            transform: rotateX(-20deg);
+        }
+        
+        .box-body {
+            position: absolute;
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(45deg, var(--chocolate-medium), var(--chocolate-light));
+            top: 100px;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+        
+        .chocolates-inside {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            right: 50px;
+            bottom: 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 15px;
+        }
+        
+        .chocolate-piece {
+            background: linear-gradient(45deg, var(--chocolate-dark), var(--chocolate-medium));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: inset 0 0 15px rgba(0,0,0,0.3);
+        }
+        
+        .chocolate-piece:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 25px var(--chocolate-gold);
+            z-index: 2;
+        }
+        
+        /* Chocolate Collection */
+        .collection-container {
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.2), rgba(74, 44, 42, 0.3));
+            border-radius: 30px;
+            padding: 50px;
+            margin: 60px auto;
+            max-width: 1000px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+        }
+        
+        .collection-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            text-align: center;
+            color: var(--chocolate-gold);
+            margin-bottom: 50px;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+        
+        .chocolate-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .chocolate-type {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .chocolate-type:hover {
+            transform: translateY(-10px);
+            border-color: var(--chocolate-gold);
+            background: rgba(255, 215, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
+        }
+        
+        .type-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: iconFloat 3s infinite ease-in-out;
+        }
+        
+        @keyframes iconFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .type-name {
+            font-size: 1.8rem;
+            color: var(--chocolate-gold);
+            margin-bottom: 15px;
+        }
+        
+        .type-desc {
+            color: var(--chocolate-cream);
+            line-height: 1.6;
+        }
+        
+        /* Love Message */
+        .love-message {
+            background: linear-gradient(135deg, rgba(255, 245, 225, 0.9), rgba(255, 248, 240, 0.95));
+            border-radius: 30px;
+            padding: 60px;
+            margin: 60px auto;
+            max-width: 900px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.3);
+            border: 3px solid var(--chocolate-gold);
+        }
+        
+        .love-message::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://www.transparenttextures.com/patterns/chocolate.png');
+            opacity: 0.1;
+            z-index: 1;
+        }
+        
+        .message-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .message-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            text-align: center;
+            color: var(--chocolate-dark);
+            margin-bottom: 40px;
+        }
+        
+        .message-text {
+            font-size: 1.4rem;
+            line-height: 2;
+            color: var(--chocolate-dark);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .signature {
+            text-align: right;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: var(--chocolate-medium);
+            margin-top: 40px;
+        }
+        
+        /* Interactive Section */
+        .interactive-section {
+            text-align: center;
+            margin: 80px 0;
+        }
+        
+        .magic-button {
+            background: linear-gradient(45deg, var(--chocolate-medium), var(--chocolate-pink));
+            color: white;
+            border: none;
+            padding: 25px 70px;
+            font-size: 1.8rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 20px 50px rgba(139, 69, 19, 0.5);
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .magic-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 30px 70px rgba(255, 107, 157, 0.6);
+        }
+        
+        .magic-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: 0.5s;
+        }
+        
+        .magic-button:hover::before {
+            left: 100%;
+        }
+        
+        /* Chocolate Fountain */
+        .fountain-container {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            margin: 60px auto;
+        }
+        
+        .fountain {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .fountain-base {
+            width: 200px;
+            height: 40px;
+            background: linear-gradient(45deg, #666, #333);
+            border-radius: 50%;
+        }
+        
+        .fountain-stem {
+            width: 60px;
+            height: 200px;
+            background: linear-gradient(45deg, silver, #ccc);
+            margin: 0 auto;
+            border-radius: 30px;
+        }
+        
+        .fountain-bowl {
+            width: 200px;
+            height: 100px;
+            background: linear-gradient(45deg, var(--chocolate-gold), var(--chocolate-cream));
+            border-radius: 100px 100px 0 0;
+            margin-top: -50px;
+        }
+        
+        .chocolate-flow {
+            width: 40px;
+            height: 200px;
+            background: linear-gradient(to bottom, var(--chocolate-medium), var(--chocolate-light));
+            margin: 0 auto;
+            border-radius: 20px;
+            animation: chocolateFlow 2s infinite alternate;
+        }
+        
+        @keyframes chocolateFlow {
+            0% {
+                height: 150px;
+                opacity: 0.8;
+            }
+            100% {
+                height: 200px;
+                opacity: 1;
+            }
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 60px 0 40px;
+            color: var(--chocolate-gold);
+            border-top: 2px solid rgba(255, 215, 0, 0.2);
+            margin-top: 60px;
+        }
+        
+        .footer-message {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+        
+        .footer-hearts {
+            font-size: 2.5rem;
+            margin: 30px 0;
+            animation: heartRainbow 4s infinite alternate;
+        }
+        
+        @keyframes heartRainbow {
+            0% { color: var(--chocolate-gold); }
+            33% { color: var(--chocolate-pink); }
+            66% { color: var(--chocolate-light); }
+            100% { color: var(--chocolate-cream); }
+        }
+        
+        /* Modal */
+        .chocolate-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background: linear-gradient(135deg, var(--chocolate-dark), var(--chocolate-medium));
+            padding: 50px;
+            border-radius: 30px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            border: 3px solid var(--chocolate-gold);
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.5);
+            animation: modalAppear 0.5s ease-out;
+        }
+        
+        @keyframes modalAppear {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        
+        .modal-title {
+            font-size: 2.5rem;
+            color: var(--chocolate-gold);
+            margin-bottom: 20px;
+        }
+        
+        .modal-message {
+            font-size: 1.4rem;
+            color: var(--chocolate-cream);
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .modal-chocolate {
+            font-size: 4rem;
+            margin: 20px 0;
+            animation: heartbeat 1.2s infinite;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 3.5rem;
+            }
+            
+            .couple-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .name-card {
+                padding: 20px 40px;
+                font-size: 1.8rem;
+            }
+            
+            .chocolate-box-container {
+                width: 300px;
+                height: 300px;
+            }
+            
+            .love-message {
+                padding: 30px;
+                margin: 30px 20px;
+            }
+            
+            .message-title {
+                font-size: 2.5rem;
+            }
+            
+            .collection-container {
+                padding: 30px;
+                margin: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Elements -->
+    <div id="floatingChocolates"></div>
+    <div id="chocolateDrizzle"></div>
+    
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1 class="main-title">Happy Chocolate Day! 🍫</h1>
+            
+            <div class="couple-container">
+                <div class="name-card himanshu-card">Himanshu</div>
+                <div class="heart-emoji">❤️</div>
+                <div class="name-card simran-card">Simran</div>
+            </div>
+            
+            <p class="tagline">Just like chocolate makes everything sweeter, you make my life more beautiful every single day!</p>
+            
+            <!-- Animated Chocolate Box -->
+            <div class="chocolate-box-container">
+                <div class="chocolate-box">
+                    <div class="box-lid"></div>
+                    <div class="box-body">
+                        <div class="chocolates-inside">
+                            <div class="chocolate-piece" data-choco="1">💝</div>
+                            <div class="chocolate-piece" data-choco="2">🍫</div>
+                            <div class="chocolate-piece" data-choco="3">❤️</div>
+                            <div class="chocolate-piece" data-choco="4">😊</div>
+                            <div class="chocolate-piece" data-choco="5">🌟</div>
+                            <div class="chocolate-piece" data-choco="6">🎁</div>
+                            <div class="chocolate-piece" data-choco="7">💕</div>
+                            <div class="chocolate-piece" data-choco="8">🥰</div>
+                            <div class="chocolate-piece" data-choco="9">✨</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <p style="color: var(--chocolate-gold); text-align: center; font-style: italic; margin-top: 20px;">
+                Click on the chocolates for sweet surprises! 🍫✨
+            </p>
+        </header>
+        
+        <!-- Chocolate Collection -->
+        <section class="collection-container">
+            <h2 class="collection-title">Our Chocolate Collection</h2>
+            <div class="chocolate-types">
+                <div class="chocolate-type">
+                    <div class="type-icon">💝</div>
+                    <h3 class="type-name">Heart Chocolate</h3>
+                    <p class="type-desc">Made with 100% pure love, just for you</p>
+                </div>
+                
+                <div class="chocolate-type">
+                    <div class="type-icon">🌟</div>
+                    <h3 class="type-name">Golden Chocolate</h3>
+                    <p class="type-desc">As precious as our golden memories together</p>
+                </div>
+                
+                <div class="chocolate-type">
+                    <div class="type-icon">✨</div>
+                    <h3 class="type-name">Magic Chocolate</h3>
+                    <p class="type-desc">Creates magical moments with every bite</p>
+                </div>
+                
+                <div class="chocolate-type">
+                    <div class="type-icon">🎁</div>
+                    <h3 class="type-name">Surprise Chocolate</h3>
+                    <p class="type-desc">Full of delightful surprises, like you</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Love Message -->
+        <section class="love-message">
+            <div class="message-content">
+                <h2 class="message-title">My Sweetest Confession 💌</h2>
+                <div class="message-text" id="loveMessage">
+                    <!-- Message will be typed here -->
+                </div>
+                <div class="signature">
+                    With all my love,<br>
+                    <span style="color: var(--chocolate-dark);">Himanshu</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Chocolate Fountain -->
+        <div class="fountain-container">
+            <div class="fountain">
+                <div class="fountain-base"></div>
+                <div class="fountain-stem"></div>
+                <div class="fountain-bowl"></div>
+                <div class="chocolate-flow"></div>
+            </div>
+        </div>
+        
+        <!-- Interactive Section -->
+        <div class="interactive-section">
+            <button class="magic-button" id="magicButton">
+                <i class="fas fa-magic"></i>
+                Send Virtual Chocolate to Simran
+                <i class="fas fa-heart"></i>
+            </button>
+        </div>
+        
+        <!-- Footer -->
+        <footer>
+            <p class="footer-message">You're sweeter than all the chocolates in the world! 🍫❤️</p>
+            <div class="footer-hearts">🍫 ❤️ ✨ 💖 🌟</div>
+            <p style="font-size: 1.2rem; color: var(--chocolate-cream);">
+                Made with infinite love and virtual chocolates by Himanshu for his sweet Simran
+            </p>
+        </footer>
+    </div>
+    
+    <!-- Chocolate Modal -->
+    <div class="chocolate-modal" id="chocolateModal">
+        <div class="modal-content">
+            <h2 class="modal-title" id="modalTitle">Sweet Message 🍫</h2>
+            <div class="modal-message" id="modalMessage"></div>
+            <div class="modal-chocolate" id="modalChocolate">🍫</div>
+            <button class="magic-button" id="closeModal" style="padding: 15px 30px; font-size: 1.2rem;">
+                <i class="fas fa-heart"></i> Taste More Sweetness
+            </button>
+        </div>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="chocolateSound">
+        <source src="https://assets.codepen.io/1468070/chocolate-unwrap.mp3" type="audio/mpeg">
+    </audio>
+    
+    <audio id="heartSound">
+        <source src="https://assets.codepen.io/1468070/heartbeat.mp3" type="audio/mpeg">
+    </audio>
+    
+    <audio id="backgroundMusic" loop>
+        <source src="https://assets.codepen.io/1468070/sweet-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // Create floating chocolates
+        function createFloatingChocolates() {
+            const container = document.getElementById('floatingChocolates');
+            const chocolates = ['🍫', '💖', '❤️', '💝', '🌟', '🎁', '✨', '🥰'];
+            
+            for (let i = 0; i < 25; i++) {
+                const chocolate = document.createElement('div');
+                chocolate.className = 'floating-chocolate';
+                chocolate.innerHTML = chocolates[Math.floor(Math.random() * chocolates.length)];
+                chocolate.style.left = Math.random() * 100 + 'vw';
+                chocolate.style.animationDelay = Math.random() * 20 + 's';
+                chocolate.style.fontSize = (Math.random() * 20 + 15) + 'px';
+                chocolate.style.color = i % 4 === 0 ? '#FFD700' : 
+                                      i % 4 === 1 ? '#FF6B9D' : 
+                                      i % 4 === 2 ? '#8B4513' : '#D2691E';
+                container.appendChild(chocolate);
+            }
+        }
+        
+        // Create chocolate drizzle
+        function createChocolateDrizzle() {
+            const container = document.getElementById('chocolateDrizzle');
+            for (let i = 0; i < 10; i++) {
+                const drizzle = document.createElement('div');
+                drizzle.className = 'chocolate-drizzle';
+                drizzle.style.left = Math.random() * 100 + 'vw';
+                drizzle.style.animationDelay = Math.random() * 3 + 's';
+                drizzle.style.animationDuration = Math.random() * 2 + 2 + 's';
+                container.appendChild(drizzle);
+            }
+        }
+        
+        // Initialize background elements
+        createFloatingChocolates();
+        createChocolateDrizzle();
+        
+        // Love message
+        const loveMessage = document.getElementById('loveMessage');
+        const messageText = `My Dearest Simran,
+
+Just like the perfect piece of chocolate melts in the mouth and spreads sweetness, 
+you've melted my heart and filled my life with endless joy and love.
+
+Every moment with you feels like savoring the finest chocolate – 
+rich, delightful, and utterly addictive. You're my milk chocolate – 
+smooth, sweet, and comforting. You're my dark chocolate – 
+deep, rich, and full of wonderful surprises. You're my white chocolate – 
+pure, delicate, and incredibly special.
+
+Simran, your laughter is sweeter than honey, your smile brighter than golden caramel, 
+and your love more comforting than the warmest cup of cocoa on a cold day.
+
+You are the secret ingredient that makes everything in my life taste better. 
+You've added sweetness to my darkest days and richness to my happiest moments.
+
+On this Chocolate Day, I want to promise you that I will always be:
+The wrapper that protects you,
+The sweetness that delights you,
+And the love that surrounds you,
+Just like chocolate envelops its delicious center.
+
+May our love story continue to be as sweet as chocolate,
+As rich as cocoa,
+And as lasting as the happiest memories we create together.
+
+You are, and always will be, my favorite flavor in the chocolate box of life! 🍫❤️`;
+        
+        let messageIndex = 0;
+        
+        function typeMessage() {
+            if (messageIndex < messageText.length) {
+                loveMessage.innerHTML = messageText.substring(0, messageIndex + 1);
+                messageIndex++;
+                setTimeout(typeMessage, 30);
+            }
+        }
+        
+        // Start typing after page loads
+        setTimeout(typeMessage, 1000);
+        
+        // Audio elements
+        const chocolateSound = document.getElementById('chocolateSound');
+        const heartSound = document.getElementById('heartSound');
+        const backgroundMusic = document.getElementById('backgroundMusic');
+        
+        // Play background music on interaction
+        document.addEventListener('click', () => {
+            if (backgroundMusic.paused) {
+                backgroundMusic.volume = 0.3;
+                backgroundMusic.play().catch(e => console.log("Music play prevented"));
+            }
+        }, { once: true });
+        
+        // Chocolate pieces interaction
+        const chocolatePieces = document.querySelectorAll('.chocolate-piece');
+        chocolatePieces.forEach(piece => {
+            piece.addEventListener('click', () => {
+                chocolateSound.currentTime = 0;
+                chocolateSound.volume = 0.5;
+                chocolateSound.play();
+                
+                const messages = [
+                    "You are the sweetest part of my life! This heart is filled with my love for you! 💖",
+                    "My love for you is richer than the finest chocolate in the world! 🍫",
+                    "Every day with you is a chocolate-covered delight! You have my heart completely! ❤️",
+                    "Your smile is sweeter than any chocolate could ever be! 😊",
+                    "You shine brighter than gold-wrapped chocolate! My precious star! 🌟",
+                    "You're the best gift life could give me! My sweet surprise! 🎁",
+                    "My heart melts for you like chocolate in the sun! 💕",
+                    "You make everything in life taste better! I'm so lucky to have you! 🥰",
+                    "You're my favorite treat in the whole wide world! ✨"
+                ];
+                
+                const index = parseInt(piece.getAttribute('data-choco')) - 1;
+                showChocolateMessage(messages[index], piece.innerHTML);
+                
+                // Animate the chocolate piece
+                piece.style.transform = 'scale(1.3)';
+                piece.style.boxShadow = '0 0 30px gold';
+                setTimeout(() => {
+                    piece.style.transform = 'scale(1)';
+                    piece.style.boxShadow = 'inset 0 0 15px rgba(0,0,0,0.3)';
+                }, 500);
+            });
+        });
+        
+        // Chocolate types interaction
+        const chocolateTypes = document.querySelectorAll('.chocolate-type');
+        chocolateTypes.forEach(type => {
+            type.addEventListener('click', () => {
+                heartSound.currentTime = 0;
+                heartSound.volume = 0.3;
+                heartSound.play();
+                
+                const messages = [
+                    "Heart Chocolate: Made with 100% pure love, just like my feelings for you! Every beat of my heart belongs to you.",
+                    "Golden Chocolate: You're more precious than gold! Our memories together shine brighter than any treasure.",
+                    "Magic Chocolate: Every moment with you feels magical! You've turned my ordinary life into an extraordinary adventure.",
+                    "Surprise Chocolate: You're the sweetest surprise life gave me! Every day with you brings new joy and happiness."
+                ];
+                
+                const index = Array.from(chocolateTypes).indexOf(type);
+                showChocolateMessage(messages[index], type.querySelector('.type-icon').textContent);
+                
+                // Animate the type
+                type.style.transform = 'translateY(-15px) scale(1.05)';
+                setTimeout(() => {
+                    type.style.transform = 'translateY(-10px)';
+                }, 300);
+            });
+        });
+        
+        // Magic button
+        const magicButton = document.getElementById('magicButton');
+        magicButton.addEventListener('click', () => {
+            heartSound.currentTime = 0;
+            heartSound.volume = 0.5;
+            heartSound.play();
+            
+            showChocolateMessage(
+                "A virtual chocolate has been sent to you, my sweet Simran! 🍫❤️ May it remind you that my love for you is sweeter than the sweetest chocolate in the world! Every day with you feels like a box of the finest chocolates - full of delightful surprises and endless sweetness.",
+                "🍫💝✨"
+            );
+            
+            // Create chocolate sending animation
+            createChocolateSendingAnimation();
+        });
+        
+        // Chocolate modal
+        const chocolateModal = document.getElementById('chocolateModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalMessage = document.getElementById('modalMessage');
+        const modalChocolate = document.getElementById('modalChocolate');
+        
+        function showChocolateMessage(message, chocolateEmoji) {
+            modalTitle.textContent = "For My Sweet Simran 🍫";
+            modalMessage.textContent = message;
+            modalChocolate.innerHTML = chocolateEmoji;
+            chocolateModal.style.display = 'flex';
+        }
+        
+        // Close modal
+        document.getElementById('closeModal').addEventListener('click', () => {
+            chocolateModal.style.display = 'none';
+        });
+        
+        // Close modal when clicking outside
+        chocolateModal.addEventListener('click', (e) => {
+            if (e.target === chocolateModal) {
+                chocolateModal.style.display = 'none';
+            }
+        });
+        
+        // Create chocolate sending animation
+        function createChocolateSendingAnimation() {
+            const chocolates = ['🍫', '💖', '❤️', '💝', '✨', '🌟'];
+            
+            for (let i = 0; i < 15; i++) {
+                const chocolate = document.createElement('div');
+                chocolate.innerHTML = chocolates[Math.floor(Math.random() * chocolates.length)];
+                chocolate.style.position = 'fixed';
+                chocolate.style.fontSize = '30px';
+                chocolate.style.left = '50%';
+                chocolate.style.top = '50%';
+                chocolate.style.zIndex = '1001';
+                chocolate.style.opacity = '0.9';
+                chocolate.style.transform = 'translate(-50%, -50%)';
+                document.body.appendChild(chocolate);
+                
+                // Random end position (going to Simran)
+                const endX = Math.random() * 100;
+                const endY = Math.random() * 100;
+                
+                // Animate chocolate flying to Simran
+                const animation = chocolate.animate([
+                    { 
+                        transform: 'translate(-50%, -50%) scale(1) rotate(0deg)',
+                        opacity: 0.9,
+                        left: '50%',
+                        top: '50%'
+                    },
+                    { 
+                        transform: `translate(-50%, -50%) scale(0.5) rotate(360deg)`,
+                        opacity: 0,
+                        left: endX + '%',
+                        top: endY + '%'
+                    }
+                ], {
+                    duration: 2000,
+                    easing: 'cubic-bezier(0.215, 0.610, 0.355, 1)'
+                });
+                
+                // Remove chocolate after animation
+                animation.onfinish = () => chocolate.remove();
+            }
+        }
+        
+        // Welcome message
+        setTimeout(() => {
+            showWelcomeMessage();
+        }, 1500);
+        
+        function showWelcomeMessage() {
+            const welcome = document.createElement('div');
+            welcome.innerHTML = `
+                <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+                    background: rgba(139, 69, 19, 0.95); color: #FFD700; padding: 30px; 
+                    border-radius: 20px; z-index: 1000; max-width: 400px; width: 90%; 
+                    text-align: center; border: 3px solid #FFD700; 
+                    box-shadow: 0 0 40px rgba(255, 215, 0, 0.5);">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 15px;">🍫 Sweet Chocolate Day! 🍫</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.5; margin-bottom: 20px; color: white;">
+                        My dear Simran, welcome to your virtual chocolate paradise! 
+                        Click on everything to discover sweet messages and surprises!
+                    </p>
+                    <button style="background: linear-gradient(45deg, #FFD700, #FF6B9D); 
+                        color: #8B4513; border: none; padding: 12px 25px; border-radius: 50px; 
+                        cursor: pointer; font-size: 1rem; font-weight: bold;">
+                        Let's Explore the Chocolate Wonderland!
+                    </button>
+                </div>
+            `;
+            
+            document.body.appendChild(welcome);
+            
+            welcome.querySelector('button').addEventListener('click', () => {
+                welcome.remove();
+                backgroundMusic.volume = 0.3;
+                backgroundMusic.play().catch(e => console.log("Music play prevented"));
+            });
+        }
+        
+        // Box hover effect
+        const chocolateBox = document.querySelector('.chocolate-box');
+        chocolateBox.addEventListener('mouseenter', () => {
+            chocolateBox.style.animation = 'boxFloat 3s infinite ease-in-out';
+        });
+        
+        // Animate chocolate types on hover
+        chocolateTypes.forEach(type => {
+            type.addEventListener('mouseenter', () => {
+                const icon = type.querySelector('.type-icon');
+                icon.style.animation = 'iconFloat 1s infinite ease-in-out';
+            });
+            
+            type.addEventListener('mouseleave', () => {
+                const icon = type.querySelector('.type-icon');
+                icon.style.animation = 'iconFloat 3s infinite ease-in-out';
+            });
+        });
+    </script>
+</body>
+</html>
